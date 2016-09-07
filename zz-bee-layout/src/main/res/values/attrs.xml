@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZzBeeLayout">
+        <!--width and height size of child ImageView -->
+        <attr name="zz_child_size" format="dimension|reference"/>
+        <!--default drawable of child ImageView-->
+        <attr name="zz_def_res" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomShapeImageView">
+        <attr name="shape" format="integer">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+            <enum name="svg" value="3" />
+        </attr>
+        <attr name="svg_raw_resource" format="reference" />
+    </declare-styleable>
+
+</resources>
