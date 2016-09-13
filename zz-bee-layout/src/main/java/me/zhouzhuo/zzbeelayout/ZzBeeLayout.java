@@ -61,6 +61,15 @@ public class ZzBeeLayout extends FrameLayout {
         }
     }
 
+    public void setChildSize(int childSize) {
+        this.childSize = childSize;
+        for (int i=0; i<getChildCount(); i++) {
+            SvgImageView iv  = (SvgImageView) getChildAt(i);
+            iv.getLayoutParams().width = childSize;
+            iv.getLayoutParams().height = childSize;
+        }
+    }
+
     public void setImageRes(int[] imageRes) {
         if (imageRes.length == 7) {
             for (int i=0; i<getChildCount(); i++) {

@@ -1,14 +1,14 @@
 package me.zhouzhuo.zzbeelayoutdemo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
 import me.zhouzhuo.zzbeelayout.ZzBeeLayout;
 import me.zhouzhuo.zzbeelayout.widget.com.meg7.widget.SvgImageView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 "http://img0.imgtn.bdimg.com/it/u=2155062783,607707723&fm=23&gp=0.jpg",
                 "http://img5.imgtn.bdimg.com/it/u=2404996392,2561119365&fm=23&gp=0.jpg"
         });
+
 
 /*
         //from drawable res
@@ -54,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
         });
+
+        //resize if necessary
+        zzBeeLayout.getLayoutParams().width = 900;
+        zzBeeLayout.getLayoutParams().height = 900;
+        zzBeeLayout.setChildSize(300);
+
 
     }
 }
